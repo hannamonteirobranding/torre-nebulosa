@@ -1920,7 +1920,7 @@ html[data-viewport="tablet"] .mobile { display: block; }
 .aparencia-1099 { opacity: 0.38; mix-blend-mode: multiply; }
 .posicao-1100 { left: -266px; top: -47px; width: 1054px; height: 703px; }
 .imagem-1101 { background-image: url("assets/textura-ritual.webp"); background-size: 1054.5055px 703px; background-position: -277.5989px 0px; --filtro-textura: brightness(1.134) contrast(1.04) saturate(0.662) sepia(0.057) var(--tom-textura-ritual); }
-.posicao-1102 { left: 48px; top: 209px; width: 313.5777px; height: 32.6158px; }
+.posicao-1102 { left: 48px; top: 205px; width: 313.5777px; height: 36.6158px; }
 .posicao-1103 { left: 27px; top: 117px; width: 342px; height: 105px; }
 .posicao-1104 { left: 48px; top: 210.4492px; width: 289px; height: 23.574px; }
 .posicao-1126 { left: 29px; top: 267px; width: 337px; height: 80px; }
@@ -2248,12 +2248,6 @@ html[data-viewport="tablet"] .mobile { display: block; }
 .posicao-1491 { left: 109.0125px; top: 235.5525px; width: 128.25px; height: 6px; }
 .tipo-1492 { font-size: 4.275px; font-weight: 500; letter-spacing: 0.855px; }
 .linha-1493 { left: 32.4938px; top: 0.854px; height: 4.275px; background-image: linear-gradient(180deg, rgb(251 245 183 / 1) 0%, rgb(241 196 105 / 1) 100%); background-size: 128.25px 6px; background-position: -32.4938px -0.854px; }
-.logo-mandala {
-  inset: 192px 0 auto;
-  width: 30px;
-  height: auto;
-  margin-inline: auto;
-}
 .posicao-1530 { left: 24px; top: 565px; width: 342px; height: 13px; }
 .tipo-1531 { font-size: 10px; font-weight: 400; letter-spacing: 1px; }
 .linha-1532 { left: 61.2715px; top: 1.48px; height: 10px; background-image: linear-gradient(180deg, rgb(251 245 183 / 1) 0%, rgb(241 196 105 / 1) 100%); background-size: 342px 13px; background-position: -61.2715px -1.48px; }
