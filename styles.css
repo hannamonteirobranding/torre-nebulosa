@@ -337,7 +337,8 @@ button.camada .camada { pointer-events: none; }
 
 .etiqueta-portal {
   position: absolute;
-  z-index: 2;
+  z-index: 1000;
+  transform: translateZ(1px);
   left: var(--etiqueta-x);
   top: var(--etiqueta-y);
   width: 330px;
@@ -394,18 +395,56 @@ button.camada .camada { pointer-events: none; }
 /* Escala das instâncias da mandala mobile no Figma (342 / 800). */
 .mandala-mobile .portal-conteudo { transform: scale(.4275); }
 
+.mandala {
+  isolation: isolate;
+}
+
 .mandala-anel {
   position: absolute;
   inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+}
+
+.mandala-letras {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transform-origin: 50% 50%;
   pointer-events: none;
 }
 
+.mandala > .posicao-200 {
+  z-index: 1;
+}
+
+.mandala > .posicao-197 {
+  z-index: 2;
+}
+
+.mandala > .posicao-199 {
+  z-index: 2;
+  transform-origin: 50% 50%;
+}
+
+.mandala > .portal-gatilho,
+.mandala > .etiqueta-portal {
+  z-index: 1000;
+}
+
+.mandala > .portal-gatilho {
+  z-index: 11;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .mandala-anel {
-    animation: giro-do-anel 10s cubic-bezier(.42, 0, .58, 1) infinite;
+  .mandala > .posicao-199,
+  .mandala-anel,
+  .mandala-letras {
+    animation: oscilacao-mandala 10s cubic-bezier(.42, 0, .58, 1) infinite;
   }
 
-  @keyframes giro-do-anel {
+  @keyframes oscilacao-mandala {
     0%, 100% { transform: rotate(0deg); }
     13% { transform: rotate(16deg); }
     34% { transform: rotate(-10deg); }
@@ -507,33 +546,29 @@ button.portal-navegacao:disabled { cursor: default; }
 
 .portal-navegacao-seta {
   position: relative;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   flex: none;
+  background: currentColor;
+  transform: rotate(45deg);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M14 2H5.50003L4.00003 3.5L6.83581 6.33579L0.585815 12.5858L3.41424 15.4142L9.66424 9.16421L12.5 12L14 10.5V2Z' fill='black'/%3E%3C/svg%3E");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M14 2H5.50003L4.00003 3.5L6.83581 6.33579L0.585815 12.5858L3.41424 15.4142L9.66424 9.16421L12.5 12L14 10.5V2Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
 }
 
 .portal-navegacao-seta::before,
 .portal-navegacao-seta::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  border-top: 1px solid currentColor;
+  content: none;
 }
 
-.portal-navegacao-seta::before {
-  inset-inline: 0 1px;
-  transform: translateY(-50%);
+.portal-navegacao-seta-anterior {
+  transform: scaleX(-1) rotate(45deg);
 }
-
-.portal-navegacao-seta::after {
-  right: 1px;
-  width: 5px;
-  height: 5px;
-  border-right: 1px solid currentColor;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.portal-navegacao-seta-anterior { transform: rotate(180deg); }
 
 .linha-texto.acao-com-seta {
   left: 0;
@@ -544,13 +579,14 @@ button.portal-navegacao:disabled { cursor: default; }
 
 .seta-diagonal {
   display: inline-block;
+  width: 12px;
+  height: 12px;
   margin-inline-start: 7px;
   vertical-align: middle;
-  transform: rotate(-45deg);
+  transform: none;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M14 2H5.50003L4.00003 3.5L6.83581 6.33579L0.585815 12.5858L3.41424 15.4142L9.66424 9.16421L12.5 12L14 10.5V2Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M14 2H5.50003L4.00003 3.5L6.83581 6.33579L0.585815 12.5858L3.41424 15.4142L9.66424 9.16421L12.5 12L14 10.5V2Z' fill='black'/%3E%3C/svg%3E");
 }
-
-.seta-diagonal::before,
-.seta-diagonal::after { border-width: 2px; }
 
 :is(.linha-568, .linha-1574) .seta-diagonal { color: #e46ca4; }
 :is(.linha-913, .linha-1798) .seta-diagonal { color: #f6d699; }
