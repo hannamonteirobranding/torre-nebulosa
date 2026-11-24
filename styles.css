@@ -113,9 +113,9 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Reduz a dominante fria depois do tratamento de cada foto. */
+/* Cada textura usa a correção de cor da sua seção. */
 .textura {
-  filter: var(--filtro-textura) url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22vinho%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeComponentTransfer%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%220.82%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#vinho");
+  filter: var(--filtro-textura);
 }
 
 .arte {
@@ -159,7 +159,13 @@ body {
 .mobile .titulo-movimento { height: 53px; }
 
 .titulo-rosie {
-  --titulo-gradiente: linear-gradient(#fbf5b7, #f1c469);
+  --titulo-amarelo: #fbf5b7;
+  --titulo-dourado: #f1c469;
+  --titulo-creme: #fff4dc;
+  --titulo-ouro: #edc56c;
+  --titulo-gradiente: linear-gradient(var(--titulo-amarelo), var(--titulo-dourado));
+  --titulo-gradiente-horizontal: linear-gradient(90deg, var(--titulo-amarelo), var(--titulo-dourado));
+  --titulo-gradiente-angular: conic-gradient(from 90deg, var(--titulo-dourado), var(--titulo-creme));
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -171,10 +177,11 @@ body {
 }
 
 .titulo-rosie-texto {
+  width: 100%;
   padding-block: .14em;
   margin-block: -.14em;
   white-space: nowrap;
-  color: transparent;
+  color: var(--titulo-cor, transparent);
   background-image: var(--titulo-gradiente);
   background-clip: text;
 }
@@ -191,12 +198,18 @@ body {
 
 .titulo-rosie-habdalla {
   --titulo-tamanho: 323px;
-  --titulo-gradiente: linear-gradient(90deg, #edc56c, #fff4dc 54%, #f1c469 94%);
+  --titulo-gradiente: linear-gradient(90deg, var(--titulo-ouro) -2%, var(--titulo-creme) 57.25%, var(--titulo-dourado) 99.75%);
+}
+
+.desktop .titulo-rosie-habdalla:not(.decoracao) {
+  --titulo-gradiente: linear-gradient(89.64deg, var(--titulo-ouro) -32.7%, var(--titulo-creme) 51.4%, var(--titulo-dourado) 111.6%);
 }
 
 .titulo-rosie-subtitulo {
   --titulo-tamanho: 64px;
   --destaque-topo: -.29em;
+  --titulo-cor: var(--titulo-creme);
+  --titulo-gradiente: none;
 }
 .titulo-rosie-para-quem { --titulo-tamanho: 118px; --titulo-linha: 1.04; }
 .titulo-rosie-e { --titulo-tamanho: 62px; --titulo-linha: 1.04; }
@@ -208,9 +221,45 @@ body {
 .titulo-rosie-ano { --titulo-tamanho: 103px; --titulo-linha: 1.3; }
 .titulo-rosie-portais { --titulo-tamanho: 63px; }
 .titulo-rosie-movimento { --titulo-tamanho: 100px; }
-.titulo-rosie-metas { --titulo-tamanho: 48px; }
-.titulo-rosie-inscricao { --titulo-tamanho: 46px; }
-.titulo-rosie-faq { --titulo-tamanho: 44px; }
+.titulo-rosie-metas {
+  --titulo-tamanho: 48px;
+  --titulo-gradiente: var(--titulo-gradiente-angular);
+}
+
+.titulo-rosie-inscricao {
+  --titulo-tamanho: 46px;
+  --titulo-gradiente: var(--titulo-gradiente-angular);
+}
+
+.titulo-rosie-faq {
+  --titulo-tamanho: 44px;
+  --titulo-gradiente: linear-gradient(90deg, var(--titulo-ouro) 28.67%, var(--titulo-creme) 52.84%, var(--titulo-dourado) 70.17%);
+}
+
+.titulo-rosie-libertacao,
+.mobile :is(.titulo-rosie-movimento, .titulo-rosie-portais) {
+  --titulo-gradiente: var(--titulo-gradiente-horizontal);
+}
+
+.titulo-rosie-abertura { --titulo-gradiente: var(--titulo-gradiente-angular); }
+
+.titulo-rosie-conquista {
+  --titulo-gradiente: linear-gradient(var(--titulo-creme) 12%, var(--titulo-ouro) 88%);
+}
+
+.titulo-rosie-ascensao {
+  --titulo-gradiente: linear-gradient(#f9e6bb 12%, var(--titulo-ouro) 76%);
+}
+
+.desktop .titulo-rosie-portais { --titulo-gradiente: none; }
+
+.titulo-rosie-linha {
+  display: block;
+  padding-block: .14em;
+  margin-block: -.14em;
+  background-image: linear-gradient(var(--titulo-ouro) 4%, var(--titulo-creme) 118%);
+  background-clip: text;
+}
 
 .desktop .titulo-rosie-ritual .titulo-rosie-texto {
   position: relative;
@@ -344,6 +393,25 @@ button.camada .camada { pointer-events: none; }
 
 /* Escala das instâncias da mandala mobile no Figma (342 / 800). */
 .mandala-mobile .portal-conteudo { transform: scale(.4275); }
+
+.mandala-anel {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mandala-anel {
+    animation: giro-do-anel 10s cubic-bezier(.42, 0, .58, 1) infinite;
+  }
+
+  @keyframes giro-do-anel {
+    0%, 100% { transform: rotate(0deg); }
+    13% { transform: rotate(16deg); }
+    34% { transform: rotate(-10deg); }
+    81% { transform: rotate(12deg); }
+  }
+}
 
 .somente-leitor {
   position: absolute;
