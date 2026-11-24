@@ -535,6 +535,26 @@ button.portal-navegacao:disabled { cursor: default; }
 
 .portal-navegacao-seta-anterior { transform: rotate(180deg); }
 
+.linha-texto.acao-com-seta {
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-position-x: 0;
+}
+
+.seta-diagonal {
+  display: inline-block;
+  margin-inline-start: 7px;
+  vertical-align: middle;
+  transform: rotate(-45deg);
+}
+
+.seta-diagonal::before,
+.seta-diagonal::after { border-width: 2px; }
+
+:is(.linha-568, .linha-1574) .seta-diagonal { color: #e46ca4; }
+:is(.linha-913, .linha-1798) .seta-diagonal { color: #f6d699; }
+
 .janela button:is(.portal-navegacao, [data-fechar-janela]:not(.acao-inscricao)) {
   transition: box-shadow 200ms ease;
 }
