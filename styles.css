@@ -31,7 +31,6 @@
   --tom-textura-apresentacao-mobile: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22tom%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeComponentTransfer%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%220.85%22%20intercept%3D%220.08%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%220.85%22%20intercept%3D%220.145%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%220.96%22%20intercept%3D%220.125%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.9436%200.0506%200.0774%200%20-0.175%200.1406%200.9068%200.1094%200%20-0.1668%200.2962%200.0803%200.7028%200%20-0.1248%200%200%200%201%200%22%2F%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#tom");
   --tom-textura-mandala-desktop: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22tom%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeComponentTransfer%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%221.19%22%20intercept%3D%22-0.13%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%221.07%22%20intercept%3D%220.055%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%221.14%22%20intercept%3D%220.125%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.8399%200.0443%200.1436%200%20-0.0113%200.1875%200.8788%20-0.034%200%20-0.0187%200.4345%200.0864%200.5073%200%20-0.0227%200%200%200%201%200%22%2F%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#tom");
   --tom-textura-sequencia: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22tom%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeComponentTransfer%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%221.19%22%20intercept%3D%22-0.13%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%221.07%22%20intercept%3D%220.055%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%221.14%22%20intercept%3D%220.125%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.982%200.0951%200.102%200%20-0.1703%200.1971%201.0019%20-0.0109%200%20-0.2224%200.3043%200.1162%200.8092%200%20-0.2735%200%200%200%201%200%22%2F%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#tom");
-  --tom-textura-mandala-mobile: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22tom%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeComponentTransfer%3E%3CfeFuncR%20type%3D%22linear%22%20slope%3D%22.935%22%20intercept%3D%22-.057%22%2F%3E%3CfeFuncG%20type%3D%22linear%22%20slope%3D%22.935%22%20intercept%3D%22.0195%22%2F%3E%3CfeFuncB%20type%3D%22linear%22%20slope%3D%22.9696%22%20intercept%3D%22.05625%22%2F%3E%3C%2FfeComponentTransfer%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#tom");
   --escala-desktop: calc(100vw / 1440px);
   --escala-mobile: min(2.5, calc(100vw / 390px));
 }
@@ -1998,10 +1997,10 @@ html[data-viewport="tablet"] .mobile { display: block; }
 .linha-1197 { left: 37.457px; top: 1.472px; height: 14px; background-image: conic-gradient(from 90deg at 50% 50%, rgb(241 196 105 / 1) 0%, rgb(255 244 220 / 1) 100%); background-size: 136px calc(100% + 1.472px); background-position: -37.457px -1.472px; }
 .posicao-1198 { left: 206px; width: 136px; height: 17px; }
 .linha-1199 { left: 39.5898px; top: 1.472px; height: 14px; background-image: conic-gradient(from 90deg at 50% 50%, rgb(241 196 105 / 1) 0%, rgb(255 244 220 / 1) 100%); background-size: 136px calc(100% + 1.472px); background-position: -39.5898px -1.472px; }
-.posicao-1200 { height: 758px; }
-.posicao-1201 { left: -350px; top: -18.0449px; width: 1222px; height: 815px; }
-.imagem-1202 { background-image: url("assets/textura-ritual.webp"); background-size: 1222.586px 815px; background-position: -321.8462px 0px; --filtro-textura: brightness(0.952) contrast(1.3) saturate(0.5632) sepia(0.099); }
-#mobile-ritual > .filtro-vinho-ritual { position: absolute; inset: 0; background: rgb(68 12 39 / .45); pointer-events: none; }
+#mobile-ritual {
+  height: 758px;
+  background: #2b0b1b url("assets/fundo-ritual-mobile.webp") center / 100% 100% no-repeat;
+}
 .posicao-1203 { left: 24px; top: 56px; width: 342px; height: 13px; }
 .tipo-1204 { font-size: 10px; font-weight: 500; letter-spacing: 3px; color: rgb(255 255 255 / 1); }
 .linha-1205 { left: 66.1377px; top: 1.48px; height: 10px; }
