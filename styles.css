@@ -2871,3 +2871,75 @@ button.portal-navegacao:disabled { cursor: default; }
 .posicao-2157 { left: 35px; top: 278px; width: 490px; height: 51px; }
 .posicao-2158 { left: 35px; top: 347px; width: 490px; height: 95px; }
 .posicao-2159 { top: 29px; width: 490px; height: 66px; }
+
+#desktop-rodape .posicao-940,
+#desktop-rodape .posicao-993,
+#mobile-rodape .posicao-1843,
+#mobile-rodape .posicao-1897 { display: none; }
+
+.footer-wordmark,
+.footer-tagline,
+.footer-copyright {
+  position: absolute;
+  margin: 0;
+}
+
+.desktop .footer-wordmark {
+  top: 61px;
+  left: 64px;
+  display: block;
+  width: 287px;
+  height: 28px;
+}
+
+.footer-copyright {
+  color: transparent;
+  background-image: linear-gradient(90deg, #f1c469 0%, #fff4dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Figtree, sans-serif;
+  font-weight: 700;
+}
+
+.desktop .footer-tagline {
+  top: 61px;
+  left: 363px;
+  display: block;
+  width: 115px;
+  height: 28px;
+}
+
+.desktop .footer-copyright {
+  top: 60px;
+  right: 64px;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.mobile #mobile-rodape { height: 75px; }
+
+.mobile .footer-wordmark {
+  top: 29px;
+  left: 19px;
+  display: block;
+  width: 136px;
+  height: auto;
+}
+
+.mobile .footer-tagline {
+  top: 28px;
+  left: 155px;
+  display: block;
+  width: 58px;
+  height: 14.12px;
+}
+
+.mobile .footer-copyright {
+  top: 33px;
+  right: 20px;
+  left: auto;
+  font-size: 8px;
+  line-height: 1.2;
+  text-align: right;
+}
