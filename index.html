@@ -4,6 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#160811">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const initialPixelRatio = window.devicePixelRatio || 1;
+
+      const updateViewport = () => {
+        // Mantém a escala responsiva independente do zoom aplicado pelo navegador.
+        const zoomRatio = (window.devicePixelRatio || initialPixelRatio) / initialPixelRatio;
+        const viewportWidth = root.clientWidth || window.innerWidth;
+        const responsiveWidth = Math.round(viewportWidth * zoomRatio);
+        const viewport = responsiveWidth <= 767 ? "phone" : responsiveWidth <= 1023 ? "tablet" : "desktop";
+
+        root.dataset.viewport = viewport;
+        root.style.setProperty("--escala-desktop", responsiveWidth / 1440);
+        root.style.setProperty("--escala-mobile", Math.min(2.5, responsiveWidth / 390));
+      };
+
+      updateViewport();
+      window.addEventListener("resize", updateViewport, { passive: true });
+      document.addEventListener("DOMContentLoaded", updateViewport, { once: true });
+    })();
+  </script>
   <title>A Torre Nebulosa | Rito da Ascensão Suprema</title>
   <meta name="description" content="Conheça o Rito da Ascensão Suprema da Torre Nebulosa: uma jornada de espiritualidade, abundância e transformação.">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
@@ -2076,34 +2098,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="camada posicao-1928 aparencia-2">
-        <div class="camada posicao-1929 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-ed1d910823.svg" alt=""></div>
-        <div class="camada posicao-1930 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-003fc75055.svg" alt=""></div>
-        <div class="camada posicao-1931 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-f7402222f1.svg" alt=""></div>
-        <div class="camada posicao-1932 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-7d7bcd262c.svg" alt=""></div>
-        <div class="camada posicao-1933 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-db6290c2e6.svg" alt=""></div>
-        <div class="camada posicao-1934 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-bab364c822.svg" alt=""></div>
-        <div class="camada posicao-1935 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-6cd72cfcd8.svg" alt=""></div>
-        <div class="camada posicao-1936 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-ebf7bc1e46.svg" alt=""></div>
-        <div class="camada posicao-1937 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-f3399d814d.svg" alt=""></div>
-        <div class="camada posicao-1938 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-110b1e02c7.svg" alt=""></div>
-        <div class="camada posicao-1939 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-83863245da.svg" alt=""></div>
-        <div class="camada posicao-1940 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-8a03834e45.svg" alt=""></div>
-        <div class="camada posicao-1941 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-2a37ca06d9.svg" alt=""></div>
-        <div class="camada posicao-1942 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-684c23c495.svg" alt=""></div>
-        <div class="camada posicao-1943 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-124499a4ef.svg" alt=""></div>
-        <div class="camada posicao-1944 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-f56acc58da.svg" alt=""></div>
-        <div class="camada posicao-1945 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-be5b8e80d5.svg" alt=""></div>
-        <div class="camada posicao-1946 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-0be16cf3d9.svg" alt=""></div>
-        <div class="camada posicao-1947 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-37b4ae333f.svg" alt=""></div>
-        <div class="camada posicao-1948 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-3fc732bf5e.svg" alt=""></div>
-        <div class="camada posicao-1949 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-95294adaec.svg" alt=""></div>
-        <div class="camada posicao-1950 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-9c33ef36ec.svg" alt=""></div>
-        <div class="camada posicao-1951 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-6dffcccf2d.svg" alt=""></div>
-        <div class="camada posicao-1952 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-0e5367a28f.svg" alt=""></div>
-        <div class="camada posicao-1953 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-04bfe1ec5a.svg" alt=""></div>
-        <div class="camada posicao-1954 decoracao" aria-hidden="true"><img class="arte" src="assets/vector-9c14d33e00.svg" alt=""></div>
       </div>
       <img class="footer-wordmark" src="assets/wordmark-torre-nebulosa.svg" alt="A Torre Nebulosa">
       <img class="footer-tagline" src="assets/tagline-torre-nebulosa.svg" alt="A maga está em todos os lugares">
