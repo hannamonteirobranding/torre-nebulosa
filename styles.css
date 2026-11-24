@@ -2430,8 +2430,9 @@ button.portal-navegacao:disabled { cursor: default; }
 .posicao-1677 { height: 1084px; }
 .linha-1678 { left: 84.4448px; top: 2.978px; height: 11px; font-family: Figtree, sans-serif; font-size: 11px; font-weight: 600; color: #fff; }
 #mobile-objetivos > .posicao-1142 { z-index: 1; }
+#mobile-objetivos > .cor-752 { background: linear-gradient(180deg, rgb(84 15 48 / 1) 0%, rgb(36 8 22 / 1) 100%); }
 .posicao-1679 { left: -1816px; top: -543.6113px; width: 3108px; height: 2072px; }
-.imagem-1680 { background-image: url("assets/textura-ritual.webp"); background-size: 3109.4905px 2072px; background-position: -818.5744px 0px; --filtro-textura: brightness(0.9) contrast(1.27) saturate(0.6828) sepia(0.154) var(--tom-textura-apresentacao-mobile); }
+.imagem-1680 { background-image: url("assets/textura-ritual.webp"); background-size: 3109.4905px 2072px; background-position: -818.5744px 0px; --filtro-textura: brightness(0.72) contrast(1.27) saturate(0.6828) sepia(0.154) var(--tom-textura-apresentacao-mobile); }
 .posicao-1681 { left: 24px; top: 97px; width: 342px; height: 58px; }
 .posicao-1683 { left: 24px; top: 179px; width: 342px; height: 69px; }
 .linha-1684 { left: 7.3184px; top: 3.97px; height: 15px; }
