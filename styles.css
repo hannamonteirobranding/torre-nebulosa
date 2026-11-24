@@ -2248,42 +2248,12 @@ html[data-viewport="tablet"] .mobile { display: block; }
 .posicao-1491 { left: 109.0125px; top: 235.5525px; width: 128.25px; height: 6px; }
 .tipo-1492 { font-size: 4.275px; font-weight: 500; letter-spacing: 0.855px; }
 .linha-1493 { left: 32.4938px; top: 0.854px; height: 4.275px; background-image: linear-gradient(180deg, rgb(251 245 183 / 1) 0%, rgb(241 196 105 / 1) 100%); background-size: 128.25px 6px; background-position: -32.4938px -0.854px; }
-.posicao-1494 { left: 157.7475px; top: 194.085px; width: 26.505px; height: 33.7725px; }
-.posicao-1495 { left: -0.0042px; top: -0.0009px; width: 26.4994px; height: 33.7649px; }
-.posicao-1496 { left: 0px; top: -0.0009px; width: 26.4994px; height: 33.7649px; }
-.posicao-1497 { left: 0.007px; top: 27.7356px; width: 26.4856px; height: 6.0286px; }
-.posicao-1498 { left: 0px; top: -0.0007px; width: 14.5982px; height: 6.0286px; }
-.posicao-1499 { left: 14.3px; top: 0.5846px; width: 6.6904px; height: 2.7564px; }
-.posicao-1500 { left: 21.0321px; top: 0.4802px; width: 0.3536px; height: 0.2854px; }
-.posicao-1501 { left: 21.4203px; top: 0.0202px; width: 5.0653px; height: 2.0991px; }
-.posicao-1502 { left: 20.2556px; top: 26.5116px; width: 0.2149px; height: 0.2715px; }
-.posicao-1503 { left: 1.1043px; top: 3.8758px; width: 4.176px; height: 3.6956px; }
-.posicao-1504 { left: 5.1139px; top: 3.5076px; width: 0.3536px; height: 0.2784px; }
-.posicao-1505 { left: 5.301px; top: -0.0009px; width: 20.1158px; height: 7.5659px; }
-.posicao-1506 { left: 11.9053px; top: 6.7789px; width: 1.2162px; height: 2.0464px; }
-.posicao-1507 { left: 0.0001px; top: 3.0325px; width: 14.5982px; height: 5.7713px; }
-.posicao-1508 { left: 13.4266px; top: 3.6044px; width: 7.5917px; height: 2.9861px; }
-.posicao-1509 { left: 21.0598px; top: 3.5001px; width: 0.3536px; height: 0.2854px; }
-.posicao-1510 { left: 21.4412px; top: 3.0458px; width: 5.0583px; height: 2.0938px; }
-.posicao-1511 { left: 0.5995px; top: 10.3434px; width: 25.3213px; height: 11.8573px; }
-.posicao-1512 { left: 0px; top: -0.0004px; width: 5.166px; height: 11.8573px; }
-.posicao-1513 { left: 0px; top: 0.0155px; width: 5.1244px; height: 11.8367px; }
-.posicao-1514 { left: 4.0775px; top: 5.6365px; width: 0.2427px; height: 0.6821px; }
-.posicao-1515 { left: 3.4042px; top: -0.0004px; width: 1.7618px; height: 5.7343px; }
-.posicao-1516 { left: 0.046px; top: 6.2001px; width: 4.0662px; height: 5.6581px; }
-.posicao-1517 { left: 20.1483px; top: -0.0004px; width: 5.1729px; height: 11.8573px; }
-.posicao-1518 { left: 0.0485px; top: 0.0155px; width: 5.1244px; height: 11.8367px; }
-.posicao-1519 { left: 0.8528px; top: 5.6365px; width: 0.2427px; height: 0.6821px; }
-.posicao-1520 { left: 0px; top: -0.0004px; width: 1.7618px; height: 5.7343px; }
-.posicao-1521 { left: 1.0538px; top: 6.2001px; width: 4.0662px; height: 5.6581px; }
-.posicao-1522 { left: 1.0758px; top: 28.5998px; width: 4.2461px; height: 3.8518px; }
-.posicao-1523 { left: 5.1832px; top: 28.2241px; width: 0.3259px; height: 0.2784px; }
-.posicao-1524 { left: 5.3427px; top: 4.9479px; width: 7.0856px; height: 23.1994px; }
-.posicao-1525 { left: 14.0367px; top: 5.0389px; width: 11.4127px; height: 27.4098px; }
-.posicao-1526 { left: 12.5391px; top: 7.0987px; width: 1.4698px; height: 6.0974px; }
-.posicao-1527 { left: 11.6656px; top: 31.3076px; width: 2.3642px; height: 1.3155px; }
-.posicao-1528 { left: 12.3797px; top: 18.6813px; width: 1.9828px; height: 13.1067px; }
-.posicao-1529 { left: 11.9013px; top: 12.187px; width: 2.7247px; height: 9.9884px; }
+.logo-mandala {
+  inset: 192px 0 auto;
+  width: 30px;
+  height: auto;
+  margin-inline: auto;
+}
 .posicao-1530 { left: 24px; top: 565px; width: 342px; height: 13px; }
 .tipo-1531 { font-size: 10px; font-weight: 400; letter-spacing: 1px; }
 .linha-1532 { left: 61.2715px; top: 1.48px; height: 10px; background-image: linear-gradient(180deg, rgb(251 245 183 / 1) 0%, rgb(241 196 105 / 1) 100%); background-size: 342px 13px; background-position: -61.2715px -1.48px; }
